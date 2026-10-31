@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>The Last Table</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game">
+
+  <div id="scene-bg"><div class="bgimg"></div><div class="bgtint"></div></div>
+
+  <div id="room" class="hidden">
+    <div id="room-bg"></div>
+    <canvas id="items" width="1376" height="768"></canvas>
+    <div id="tokens"></div>
+    <div id="caption"></div>
+  </div>
+
+  <div id="prep" class="hidden"></div>
+
+  <div id="vn" class="hidden">
+    <div id="vn-dim"></div>
+    <div id="stage"></div>
+    <div id="nameplate"><span id="name"></span><span id="tag"></span></div>
+    <div id="dialogue">
+      <div id="rel"></div>
+      <div id="text"></div>
+      <div id="cont">▼</div>
+    </div>
+    <div id="choices"><div id="choice-prompt"></div><div id="choice-list"></div></div>
+    <div id="topbar">
+      <button id="btn-journal" class="btn small">Dossier (J)</button>
+      <button id="btn-log" class="btn small">Log (L)</button>
+      <button id="btn-hide" class="btn small">Hide (H)</button>
+    </div>
+    <div id="loc"></div>
+    <div id="toast"></div>
+    <div id="history" class="panel hidden">
+      <div class="panel-head"><span>DIALOGUE LOG</span><button id="hist-close" class="btn small">Close (L)</button></div>
+      <div id="history-body"></div>
+    </div>
+    <div id="intro" class="hidden"><div id="intro-row"></div><div id="intro-hint">Click or press Space to continue</div></div>
+  </div>
+
+  <button id="btn-journal-prep" class="btn small hidden">Dossier (J)</button>
+
+  <div id="journal" class="panel hidden">
+    <div class="panel-head"><span>DOSSIER — who is who at the table</span><button id="journal-close" class="btn small">Close (J)</button></div>
+    <div id="journal-main"><div id="journal-list"></div><div id="journal-detail"></div></div>
+  </div>
+
+  <div id="card" class="hidden"><div id="card-title"></div><div id="card-sub"></div></div>
+  <div id="fader"></div>
+  <button id="btn-full" class="btn small" title="Fullscreen">⛶</button>
+
+  <div id="title" class="screen">
+    <div class="bgimg"></div><div class="shade"></div>
+    <div class="title-box">
+      <h1>THE LAST TABLE</h1>
+      <p>Six dinners. One table. You set it — they decide who remains.</p>
+      <button id="btn-new" class="btn big">New Game</button>
+      <button id="btn-continue" class="btn big hidden">Continue</button>
+      <div id="chapters"><span>Test, from dinner:</span></div>
+      <p class="help">Click / Space — next · Ctrl — fast-forward · H — hide interface · L — log · J — dossier</p>
+    </div>
+  </div>
+
+  <div id="endscreen" class="screen hidden">
+    <div class="bgimg"></div><div class="bgtint"></div><div class="vign"></div>
+    <div class="end-card">
+      <div class="end-small">THE END</div>
+      <h1 id="end-title"></h1>
+      <div id="end-sub"></div>
+      <div id="end-stats"></div>
+      <button id="btn-menu" class="btn big">Main Menu</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/state.js"></script>
+<script src="js/chars.js"></script>
+<script src="js/story_base.js"></script>
+<script src="js/story_consts.js"></script>
+<script src="js/story_gen.js"></script>
+<script src="js/story.js"></script>
+<script src="js/assets.js"></script>
+<script src="js/vn.js"></script>
+<script src="js/minigames.js"></script>
+<script src="js/dinner.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
